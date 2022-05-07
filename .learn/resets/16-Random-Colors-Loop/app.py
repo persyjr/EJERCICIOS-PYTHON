@@ -1,6 +1,6 @@
 import random
 
-def get_color(color_number):
+def get_color(color_number=4):
     # making sure is a number and not a string
     color_number = int(color_number)
 
@@ -13,16 +13,11 @@ def get_color(color_number):
               }
     return switcher.get(color_number,"Invalid Color Number")
 
-    
 
 def get_allStudentColors():
     example_color = get_color(1)
     students_array = []
     #your loop here
-    for i in range(0, 10):
-        aleatorio = random.randint(0, 3)
-        color_Random=get_color(aleatorio)
-        students_array.append(color_Random)
-    return students_array
+
 
 print(get_allStudentColors())
